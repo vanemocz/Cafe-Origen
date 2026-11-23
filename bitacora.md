@@ -4,26 +4,29 @@
 
 | Propiedad | Tipo de dato | Significado |
 | :--- | :--- | :--- |
-| `id` | | |
-| `fecha` | | |
-| `cliente` | | |
-| `producto` | | |
-| `ciudad` | | |
-| `cantidad` | | |
-| `precio` | | |
+| `id` | number | identificador unico |
+| `fecha` | string | fecha en la que se realizo la venta |
+| `cliente` | string | codigo que identifica al cliente |
+| `producto` | string | nombre y presentacion del producto |
+| `ciudad` | string | ciudad donde se realizo la venta |
+| `cantidad` | number | cantidad de productos vendidos |
+| `precio` | number | precio del producto vendido |
 
 ---
 
 ## 2. Casos borde detectados en los datos (Minirreto 1)
 
 ### Hallazgo 1:
-- **Descripción**:
+- **Descripción**: 
+  En la cantidad de productos hay datos como 0, es un caso borde que hay que tener en cuenta porque puede afectar los calculos.
 - **¿Cómo se debe tratar en el análisis?**:
+  Con una funcion validar que el arreglo no este vacio.
 
 ### Hallazgo 2:
 - **Descripción**:
+  En la ciudad hay varios datos escritos de forma variada aunque se tratan del mismo dato.
 - **¿Cómo se debe tratar en el análisis?**:
-
+  Normalizando los datos de la ciudad.
 ---
 
 ## 3. Patrones con ciclos manuales (Minirreto 2)
